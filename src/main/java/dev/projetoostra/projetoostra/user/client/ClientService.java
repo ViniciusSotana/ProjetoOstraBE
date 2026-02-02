@@ -61,7 +61,7 @@ public class ClientService {
 
     public void deleteClient(UUID id){
         Client Client = clientRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Vendedora não encontrada"));
+                .orElseThrow(() -> new EntityNotFoundException("Cliente não encontrada"));
 
         clientRepository.delete(Client);
     }
